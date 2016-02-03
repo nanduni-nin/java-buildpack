@@ -42,7 +42,7 @@ module JavaBuildpack
           @droplet.java_home.as_env_var,
           @droplet.java_opts.as_env_var,
           'exec',
-          "$PWD/#{(@droplet.sandbox + 'bin/catalina.sh').relative_path_from(@droplet.root)}",
+          "$PWD/#{(@droplet.sandbox + 'bin/wso2server.sh').relative_path_from(@droplet.root)}",
           'run'
         ].flatten.compact.join(' ')
       end
